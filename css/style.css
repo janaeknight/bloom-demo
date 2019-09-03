@@ -1,0 +1,214 @@
+/*
+    ESC USEFUL INFO
+-- -- -- -- -- --
+    Fonts: 
+            Logo:       'Butterfly Kids', cursive; // GOOGLE FONTS //
+            Body:        Arial, "Helvetica Neue", Helvetica, sans-serif;
+    Colors:
+            CU:         #E7718B (pink); 
+                        #40413B (gray-buttons); #BDC5D4 (gray-borders);
+
+ /**/
+  /**/
+   /**/
+    /**/
+     /**/
+      /**/
+       /**/
+        /**/
+
+ /*###################### TABLE OF CONTENTS #######################
+        TOP-BAR
+        HERO
+        CONTENT BREAKS
+                            CB-1
+                            CB-2
+        FOOTER
+ /*###############################################################*/
+/*#################################################################
+
+TTA
+
+    # Empty space on sides of html don't exist. Probably conflicts with :: container-fluid ::. Probably shouldn't have used it in the first place. Current solution is making more divs to surround problem divs with and make problem divs sub divs. But that's just weird.
+    # Making header tags link tags is stupid.
+    # || CHECKOUT OUR PRODUCTS! || imgs need to match eachother because they don't.
+    # Social media links don't center.
+    # If you're not EXACTLY at 100% viewing distance, the pictures in the second content break warp because they're not the same size. I would fix that if the wifi worked but it doesn't so that's that.
+
+-- -- -- -- -- --
+
+FIXED
+
+    # Can't figure out how to make <span>ned icons a different size than the <p> tag.
+    # Google Fonts are unresponsive. Eh.
+    # Hero Pic too large vertically. Crop.
+
+ ##################################################################
+ #################################################################*/
+
+ body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: snow;
+}
+a {
+    text-decoration: none;
+}
+/*###############################################################*/
+
+/************************* TOP-BAR *************************/
+.top-bar {
+    color: snow;
+    padding-bottom: 10px;
+    background: rgba(0,0,0,1);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 13%, rgba(56,56,59,1) 44%, rgba(56,56,59,1) 59%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 13%, rgba(56,56,59,1) 44%, rgba(56,56,59,1) 59%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 13%, rgba(56,56,59,1) 44%, rgba(56,56,59,1) 59%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 13%, rgba(56,56,59,1) 44%, rgba(56,56,59,1) 59%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 13%, rgba(56,56,59,1) 44%, rgba(56,56,59,1) 59%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+}
+h1 {
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 45px;
+}
+.xs-page-header {
+    font-size: 24px;
+}
+.top-bar a {
+    color: snow;
+    font-size: 42px;
+}
+.top-bar a:hover {
+    color: #E7718B;
+}
+.media-links {
+    text-align: right;
+}
+.xs-media-links {
+    text-align: right;
+    font-size: 22px;
+}
+/*************************** HERO ***************************/
+.hero {
+    padding-top: 60px; padding-bottom: 65px;
+    color: white;
+    background-color: #E7718B;
+    font-size: 1.1em;
+}
+.hero-title {
+    padding-bottom: 30px;
+    font-size: 1.7em;
+}
+.hero-left-buttons {
+    padding-top: 20px;
+    text-align: center;
+}
+.hero-left-buttons a {
+    padding-left: 15px; padding-right: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    background-color: black;
+    color: snow;
+    border-radius: 5px;
+    text-align: center;
+}
+/*rainbow link animation*/
+#anim {
+    animation-name: rainbowLink;
+    animation-duration: 3s;
+}
+@keyframes rainbowLink {
+    0% {
+        background-color: #9bd8c8;
+    }
+    10% {
+        background-color: #f6b056;
+    }
+    20% {
+        background-color: #f6f056;
+    }
+    30% {
+        background-color: #b6f656;
+    }
+    40% {
+        background-color: #91a7f4;
+    }
+    50% {
+        background-color: #ddb6f0;
+    }
+    70% {
+        background-color: #f0b6ea;
+    }
+    80% {
+        background-color: #eb7e97;
+    }
+    90% {
+        background-color: #f27163;
+    }
+    100% {
+        background-color: #63f294;
+    }
+}
+            /*rainbow link animation*/
+.hero-left-buttons a:link, a:visited {
+    text-decoration: none;
+}
+.hero-left-buttons a:hover {
+    animation: rainbowLink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color: black;
+}
+/********************** CONTENT BREAKS **********************/
+.content-break {
+    padding-top: 42px; padding-bottom: 65px;
+    color: #454545;
+}
+.cb-title-h1,
+.cb-title-h2 {
+    font-size: 1.2em;
+}
+.cb-text-lp,
+.cb-cb-reviews-text {
+    font-size: 1em;
+}
+                                            /*CB 1*/
+.cb-one {
+    background-color: snow;
+    border-top: none; border-left: none; border-right: none;
+    border-bottom: 3px solid #F6E8E9;
+}
+span.cb-title-h1-icon {
+    font-size: 1.8em;
+}
+                                            /*CB 2*/
+.cb-two {
+    background-color: white;
+}
+.cb-title-h2 {
+    padding-bottom: 15px;
+}
+.cb-cb-subcolumns-column a{
+    padding-bottom: 30px;
+}
+.cb-cb-subcolumns-column img{
+    margin-bottom: 30px;
+    border: 10px inset silver;
+}
+/*********************** FOOTER ***********************/
+.footer-bar {
+    padding-top: 10px; padding-bottom: 10px;
+    background-color: #26292E;
+    color: snow;
+}
+.footer-bar-copyright {
+    font-size: .9em;
+}
+.media-links-footer {
+    font-size: 1.2em;
+}
+.media-links-footer a:hover {
+    color: #E7718B;
+}
+.xs-media-links-footer {
+    font-size: .9em;
+}
